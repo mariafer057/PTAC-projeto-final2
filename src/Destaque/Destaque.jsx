@@ -1,16 +1,17 @@
-import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
 import Cabecalho from "../componentes/cabecalho";
-import Card from '../Card/Card';
-
+import Card from "../Card/Card";
 export default function Destaque(){        
-    const MeusDestaq = JSON.parse(localStorage.getItem("Lista"));
+    const MeusDestaq = JSON.parse(localStorage.getItem("Lista")).slice(-2);
     const mostrar = MeusDestaq.slice(-2);
     console.log(mostrar);
 
     return (
         <div>
         <Cabecalho/>
-        <Card lista={mostrar} />
+        <h2>Aqui estão as Músicas:</h2>
+        <br />
+        <Card MeusDestaq={mostrar} />
         </div>
-    )
+    );
 }

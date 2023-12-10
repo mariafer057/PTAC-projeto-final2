@@ -4,13 +4,16 @@ import "./home.css"
 
 export default function Home(){
     const videos =  JSON.parse(localStorage.getItem("Lista")) || []
-    console.log(videos)
     return(
         <div>
          <Cabecalho/>
-        <h1>ola</h1>
+         <div class="msc">
+        <h1>Músicas</h1>
+        </div>
 
+        <div class="container">
         <Card videos={videos}/>
+      </div>
 </div>
         );
 }

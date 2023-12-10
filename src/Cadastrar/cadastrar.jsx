@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Cadastrar() {
     const listaLocalStorage = JSON.parse(localStorage.getItem("Lista"))  || [];
@@ -10,18 +11,19 @@ export default function Cadastrar() {
    const [descricao, setDescricao ] = useState("");
    const [letraMsc, setLetraMsc ] = useState("");
    const [link, setLink ] = useState("");
-   const [lista, setLista ] = useState("");
+   const [lista, setLista ] = useState(listaLocalStorage || []);
    const [id, setId] = useState(listaLocalStorage[listaLocalStorage.length - 1]?.id + 1 || 1);
 
    useEffect(() => {
     localStorage.setItem("Lista", JSON.stringify(lista));}, [lista]);
 
     //importanda o modulo
+const navigate = useNavigate();
 
-    const salvar =(e) =>{
+    const salvar = async (e) =>{
         // e.preventDefault(); > previnir o comportamento
         e.preventDefault();
-        setLista([...lista, {
+        await setLista([...lista, {
                 nome: nome, 
                 cantor:cantor, 
                 duracao: duracao, 
@@ -39,8 +41,10 @@ export default function Cadastrar() {
         setDescricao("");
         setLetraMsc("");
         setLink("");
+        navigate("/");
 
     }
+    console.log(nome)
     return(
     <div className="botao">
         <h1 className="titulo">Videos</h1>

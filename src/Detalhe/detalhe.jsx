@@ -1,7 +1,6 @@
 import { useParams } from "react-router-dom";
 import Cabecalho from "../componentes/cabecalho";
-import Card from '../Card/Card';
-
+import Card from "../Card/Card";
 export default function Detalhe(){
     const { id } = useParams();
     const lista = JSON.parse(localStorage.getItem("Lista"));
@@ -15,8 +14,7 @@ export default function Detalhe(){
     });
     
     return (
-        <div>
-    {video.map((videos)=> (
+    videos.map((videos)=> 
     <div key={videos.id}>
         <Cabecalho />
 <h1>Veja os detalhes sobre a música</h1>
@@ -28,8 +26,5 @@ export default function Detalhe(){
     </div>
     )
 )
-}
-</div>
-    );
 }
 //tive que "transformar" o meu video em um array, por que a minha pg detalhe não tava funcionando, então tive que fazer com que as minhas info retornasse para o meu array
