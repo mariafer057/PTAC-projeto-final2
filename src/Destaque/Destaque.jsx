@@ -11,7 +11,7 @@ export default function Destaque(){
         <Cabecalho/>
         <h2>Aqui estão as Músicas:</h2>
         <br />
-        <Card MeusDestaq={mostrar} />
+        <Card videos={mostrar} />
         </div>
     );
 }

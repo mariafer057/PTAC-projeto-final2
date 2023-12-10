@@ -33,7 +33,7 @@ const navigate = useNavigate();
                 link: link,
                 id: id
         }]);
-        setId(id + 1);
+        setId(id + 1);       
         setNome("");
         setCantor("");
         setDuracao("");
@@ -44,7 +44,6 @@ const navigate = useNavigate();
         navigate("/");
 
     }
-    console.log(nome)
     return(
     <div className="botao">
         <h1 className="titulo">Videos</h1>

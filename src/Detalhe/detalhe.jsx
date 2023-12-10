@@ -14,14 +14,20 @@ export default function Detalhe(){
     });
     
     return (
-    videos.map((videos)=> 
+    video.map((videos)=> 
     <div key={videos.id}>
         <Cabecalho />
 <h1>Veja os detalhes sobre a música</h1>
 <p><strong>Nome: </strong>{videos.nome}</p>
 <iframe width= "500" height= "300"src={`https://www.youtube.com/embed/${videos.link.slice(17)}`} frameborder="0"></iframe>
-<p><strong>letra da Música: </strong>{videos.LetraMsc}</p>
-<p><strong>Cantor: </strong>{videos.Cantor}</p>
+<p><strong>letra da Música: </strong>{videos.letraMsc}</p>
+<p><strong>Cantor: </strong>{videos.cantor}</p>
+<p><strong>Duração: </strong>{videos.duracao}</p>
+<p><strong>Gênero: </strong>{videos.estilo}</p>
+<p><strong>Descrição: </strong>{videos.descricao}</p>
+
+
+
 
     </div>
     )
