@@ -7,12 +7,14 @@ export default function Home(){
     return(
         <div>
          <Cabecalho/>
-         <div class="msc">
-        <h1>Músicas</h1>
+         <div class="">
+        <h1 class="msc">Músicas</h1>
         </div>
 
-        <div class="container">
+        <div>
+          <div className="videos-container">
         <Card videos={videos}/>
+      </div>
       </div>
 </div>
         );

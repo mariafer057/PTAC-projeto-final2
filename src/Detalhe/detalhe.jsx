@@ -18,6 +18,7 @@ export default function Detalhe(){
     <div key={videos.id}>
         <Cabecalho />
 <h1>Veja os detalhes sobre a música</h1>
+<div className="container">
 <p><strong>Nome: </strong>{videos.nome}</p>
 <iframe width= "500" height= "300"src={`https://www.youtube.com/embed/${videos.link.slice(17)}`} frameborder="0"></iframe>
 <p><strong>letra da Música: </strong>{videos.letraMsc}</p>
@@ -27,7 +28,7 @@ export default function Detalhe(){
 <p><strong>Descrição: </strong>{videos.descricao}</p>
 
 
-
+</div>
 
     </div>
     )
