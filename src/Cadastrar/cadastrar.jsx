@@ -76,9 +76,9 @@ const navigate = useNavigate();
     <input value={letraMsc} type="text"
     onChange={(e)=>{ setLetraMsc(e.target.value)}}/>
 
-<p className="txt-input"><b>Link do video:</b></p>
+<div><p className="txt-input"><b>Link do video:</b></p>
     <input value={link} type="text"
-    onChange={(e)=>{ setLink(e.target.value)}}/>
+    onChange={(e)=>{ setLink(e.target.value)}}/></div>
 
 
 <button className="btn">ADD</button>   

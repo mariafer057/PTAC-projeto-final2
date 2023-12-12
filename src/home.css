@@ -34,16 +34,29 @@ body, html{
   }
 
   .videos-container{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /*coloquei esse grid para que fique 2 colunas por fileira*/
     flex-wrap: wrap;
     justify-content: space-around;
+    margin-left: 20px; /*para ficar com um espaçamentento APENAS para a esquerda*/
+    gap: 20px; /*para fazer um espac vertical*/
   }
   .card{
     margin-right: 20px;
+    flex: 1; /*coloquei o flex 1 para que fiquem com o mesmo espaçamento*/
   }
 
 a{
   text-decoration: none;
   background-color: aliceblue;
   color: #dd2292;
+}
+.btn{
+  padding: 10px 20px;
+  background-color: #540e65;
+  color: aliceblue;
+  border: none; /*para remover a borda*/
+  border-radius: 17px;
+  margin-left: 20px;
+  margin-top: 12px;
 }
