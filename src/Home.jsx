@@ -3,6 +3,7 @@ import Card from './Card/Card';
 import "./home.css"
 import Rodape from './componentes/rodape';
 
+
 export default function Home(){
     const videos =  JSON.parse(localStorage.getItem("Lista")) || []
     return(
